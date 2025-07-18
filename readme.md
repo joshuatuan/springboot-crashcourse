@@ -10,4 +10,7 @@
 ![S1\C3 Screenshot](screenshots/s1c3-screenshot.png)
 ![S1\C3 Screenshot 2](screenshots/s1c3-screenshot2.png)
 
+### Session 2: Exercise: Calculator TDD-Style
+![S1\E1 Screenshot](screenshots/s2-e1-screenshot1.png)
+![S1\E1 Screenshot](screenshots/s2-e1-screenshot2.png)
 ***
