@@ -48,11 +48,42 @@ class ProductTest {
     }
 
     @Test
-    void testEquals() {
+    void shouldReturnProperToStringPrintFormat() {
+        Product product = new Product(1L, "Laptop", 1200.00);
+        String expected = "Product{id=1, name='Laptop', price=1200.0}";
 
+        assertEquals(expected, product.toString());
     }
 
     @Test
-    void testHashCode() {
+    void equalsShouldReturnTrueForIdenticalProducts() {
+        Product p1 = new Product(1L, "Laptop", 1200.00);
+        Product p2 = new Product(1L, "Laptop", 1200.00);
+
+        assertTrue(p1.equals(p2));
+    }
+
+    @Test
+    void equalsShouldReturnFalseForNonIdenticalProducts() {
+        Product p1 = new Product(1L, "Laptop", 1200.00);
+        Product p2 = new Product(2L, "Laptop", 1200.00);
+
+        assertFalse(p1.equals(p2));
+    }
+
+    @Test
+    void hashCodeShouldBeEqualForEqualObjects() {
+        Product p1 = new Product(1L, "Laptop", 1200.00);
+        Product p2 = new Product(1L, "Laptop", 1200.00);
+
+        assertEquals(p1.hashCode(), p2.hashCode());
+    }
+
+    @Test
+    void hashCodeShouldNotBeEqualForNonEqualObjects() {
+        Product p1 = new Product(1L, "Laptop", 1200.00);
+        Product p2 = new Product(2L, "Laptop", 1200.00);
+
+        assertNotEquals(p1.hashCode(), p2.hashCode());
     }
 }
